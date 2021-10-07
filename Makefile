@@ -14,7 +14,7 @@ LDFLAGS=-L$(APR_DIR)/.libs -lapr-1
 .PHONY: clean
 
 clean:
-	rm -rf basic pool file fileinfo filelock readdir
+	rm -rf basic pool file fileinfo filelock readdir strings
 
 %:%.c 
 	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
