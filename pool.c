@@ -13,7 +13,7 @@ int main() {
     apr_status_t rv;
     apr_pool_t *mp;
 
-    rv = apr_pool_initialize();
+    rv = apr_initialize();
     if (rv != APR_SUCCESS) {
         return -1;
     }

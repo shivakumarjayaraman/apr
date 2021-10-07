@@ -11,7 +11,7 @@ int main() {
     apr_pool_t *mp;
 
     // Initialize the APR resource pools
-    rv = apr_pool_initialize();
+    rv = apr_initialize();
     if (rv != APR_SUCCESS) {
         return -1;
     }
@@ -39,4 +39,5 @@ int main() {
 
     // destroying the pool closes the file 
     apr_pool_destroy(mp);
+    apr_terminate();
 }

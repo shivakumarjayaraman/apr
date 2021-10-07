@@ -1,3 +1,8 @@
 Trying out the tutorial in 
 
 http://dev.ariel-networks.com/apr/apr-tutorial/html/apr-tutorial.html
+
+apr's biggest advantage is the resource pools which means the pools take care of releasing resources.. Run valgrind this way to test leaks 
+
+valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes <executable>
+
